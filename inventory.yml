@@ -1,0 +1,12 @@
+all:
+  children:
+    master-nodes:
+      hosts:
+        k3s-master:
+          vm_config: "-m 3G --disk 5G 20.04"
+    agent-nodes:
+      hosts:
+        k3s-agent-01:
+          vm_config: "-m 4G --disk 5G 20.04"
+        k3s-agent-02:
+          vm_config: "-m 5G --disk 5G 20.04"
